@@ -1,0 +1,349 @@
+nav {
+  position: relative;
+  z-index: +3;
+  background-color: black;
+}
+
+nav .main_logo img {
+  background-color: #fff;
+  max-width: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+nav .burger img {
+  display: none;
+}
+
+nav .nav_list {
+  background-color: black;
+}
+
+nav .nav_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 40px;
+  padding: 12px;
+}
+
+nav .nav_list ul li {
+  list-style: none;
+  list-style-type: none;
+}
+
+nav .nav_list ul li a {
+  text-decoration: none;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+nav .nav_list ul li a:hover {
+  color: #f78225;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .main_logo img {
+    width: 37%;
+  }
+  .nav_list {
+    margin-top: 55px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: #fff;
+    -webkit-transform: t translateX(-500px);
+            transform: t translateX(-500px);
+  }
+  .nav_list ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .burger img {
+    display: block !important;
+    position: absolute;
+    top: 3px;
+    right: 11px;
+  }
+  .vector1 {
+    right: 0;
+  }
+}
+
+#heading {
+  position: relative;
+}
+
+#heading .text_vector .bold {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: black;
+}
+
+#heading .text_vector p {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: black;
+}
+
+#heading .vector1 {
+  position: absolute;
+  bottom: 0px;
+}
+
+#heading .vector1 img {
+  width: 80%;
+}
+
+#heading .vector1 p {
+  margin: 0;
+}
+
+#heading .vector2 img {
+  width: 19%;
+}
+
+#heading .animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#heading .animation img {
+  width: 50%;
+}
+
+#icons .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  padding: 8px;
+}
+
+#icons .icon li {
+  list-style: none;
+  list-style-type: none;
+}
+
+#icons .icon li a {
+  text-decoration: none;
+  color: black;
+}
+
+#icons .icon li a:hover {
+  color: #f78225;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#cardss {
+  position: relative;
+  z-index: 666;
+}
+
+#cardss .card_item img {
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+#cardss .block p {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 63px;
+  color: #913535;
+  position: absolute;
+  top: 150px;
+  left: 240px;
+  z-index: +6;
+}
+
+footer {
+  background-color: black;
+}
+
+footer .footer_logo img {
+  background-color: #fff;
+  max-width: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer .footer_list1 ul,
+footer .contact_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  padding: 10px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .footer_list1 ul li,
+footer .contact_list ul li {
+  list-style: none;
+  list-style-type: none;
+}
+
+footer .footer_list1 ul li a,
+footer .contact_list ul li a {
+  text-decoration: none;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+footer .footer_list1 ul li a:hover,
+footer .contact_list ul li a:hover {
+  color: #f78225;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+footer .end .endtext p {
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  padding: 5px;
+}
+
+#Contact_us .home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Contact_us .home p {
+  margin: 0;
+}
+
+#Contact_us .left .big p {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 74px;
+  color: #0000;
+}
+
+#Contact_us .left .boldddd p {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: #0000;
+}
+
+#Contact_us .left .normal p {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #0000;
+}
+
+#Contact_us .contact_list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  padding: 10px 0px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#Contact_us .contact_list ul li {
+  list-style: none;
+  list-style-type: none;
+}
+
+#Contact_us .contact_list ul li a {
+  text-decoration: none;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: black;
+}
+
+#Contact_us .contact_list ul li a:hover {
+  color: #f78225;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+}
+/*# sourceMappingURL=style.css.map */

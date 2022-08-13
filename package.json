@@ -1,0 +1,24 @@
+{
+  "name": "monke-studio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeyno12/monke-studio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeyno12/monke-studio/issues"
+  },
+  "homepage": "https://github.com/zeyno12/monke-studio#readme",
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "rebuild": "^0.1.2"
+  }
+}

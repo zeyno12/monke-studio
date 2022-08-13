@@ -1,0 +1,61 @@
+@mixin img-nav($bg, $mwidth, $ob-fit) {
+  background-color: $bg;
+  max-width: $mwidth;
+  object-fit: $ob-fit;
+}
+@mixin ul-flex($items, $content, $gap, $puding) {
+  display: flex;
+  align-items: $items;
+  justify-content: $content;
+  gap: $gap;
+  padding: $puding;
+}
+@mixin li {
+  list-style: none;
+  list-style-type: none;
+}
+@mixin a-dec($tdec, $fontf, $fontsty, $fontw, $fonts, $lineh, $color) {
+  text-decoration: $tdec;
+  font-family: $fontf;
+  font-style: $fontsty;
+  font-weight: $fontw;
+  font-size: $fonts;
+  line-height: $lineh;
+  color: $color;
+  &:hover {
+    color: $gold;
+    transition: 0.3s ease-in-out;
+  }
+}
+@mixin a-link($tdec, $color) {
+  text-decoration: $tdec;
+  color: $color;
+  &:hover {
+    color: $gold;
+    transition: 0.3s ease-in-out;
+  }
+}
+@mixin dec($fontf, $fontsty, $fontw, $fonts, $lineh, $color) {
+  font-family: $fontf;
+  font-style: $fontsty;
+  font-weight: $fontw;
+  font-size: $fonts;
+  line-height: $lineh;
+  color: $color;
+}
+@mixin medialist($mt, $postion, $width, $top, $left, $bg, $color, $transfm) {
+  margin-top: $mt;
+  position: $postion;
+  width: $width;
+  top: $top;
+  left: $left;
+  background-color: $bg;
+  color: $color;
+  transform: t$transfm;
+}
+@mixin imgmedia {
+  display: block !important;
+  position: absolute;
+  top: 3px;
+  right: 11px;
+}

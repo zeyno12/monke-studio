@@ -1,0 +1,224 @@
+nav {
+  position: relative;
+  z-index: +3;
+  background-color: black;
+  .main_logo {
+    img {
+      @include img-nav(#fff, 70%, cover);
+    }
+  }
+  .burger {
+    img {
+      display: none;
+    }
+  }
+  .nav_list {
+    background-color: $maincolor;
+    ul {
+      @include ul-flex(center, flex-end, 40px, 12px);
+      li {
+        @include li;
+        a {
+          @include a-dec(
+            none,
+            "Cabinet Grotesk",
+            normal,
+            700,
+            18px,
+            22px,
+            #ffffff
+          );
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .main_logo {
+    img {
+      width: 37%;
+    }
+  }
+  .nav_list {
+    ul {
+      display: flex;
+      flex-direction: column;
+    }
+    @include medialist(
+      55px,
+      absolute,
+      100%,
+      0,
+      0,
+      black,
+      #fff,
+      translateX(-500px)
+    );
+  }
+  .burger {
+    img {
+      @include imgmedia;
+    }
+  }
+  .vector1 {
+    right: 0;
+  }
+}
+#heading {
+  position: relative;
+  .text_vector {
+    .bold {
+      @include dec("Cabinet Grotesk", normal, 700, 30px, 37px, black);
+    }
+    p {
+      @include dec("Cabinet Grotesk", normal, 400, 18px, 25px, black);
+    }
+  }
+  .vector1 {
+    position: absolute;
+    bottom: 0px;
+    img {
+      width: 80%;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  .vector2 {
+    img {
+      width: 19%;
+    }
+  }
+  .animation {
+    display: flex;
+    justify-content: center;
+    img {
+      width: 50%;
+    }
+  }
+}
+#icons {
+  .icon {
+    @include ul-flex(center, center, 40px, 8px);
+    li {
+      @include li;
+      a {
+        @include a-link(none, black);
+      }
+    }
+  }
+}
+#cardss {
+  position: relative;
+  z-index: 666;
+  .card_item {
+    img {
+      width: 90%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+  .block {
+    p {
+      @include dec(
+        "Cabinet Grotesk",
+        normal,
+        700,
+        40px,
+        63px,
+        rgb(145, 53, 53)
+      );
+      position: absolute;
+      top: 150px;
+      left: 240px;
+      z-index: +6;
+    }
+  }
+}
+footer {
+  background-color: $maincolor;
+  .footer_logo {
+    img {
+      @include img-nav(#fff, 70%, cover);
+    }
+  }
+  .footer_list1,
+  .contact_list {
+    ul {
+      @include ul-flex(flex-start, flex-start, 10px, 10px 0px);
+      flex-direction: column;
+      li {
+        @include li;
+        a {
+          @include a-dec(
+            none,
+            "Cabinet Grotesk",
+            normal,
+            700,
+            18px,
+            22px,
+            #ffffff
+          );
+        }
+      }
+    }
+  }
+  .end {
+    .endtext {
+      p {
+        width: 100%;
+        color: #ffffff;
+        text-align: center;
+        padding: 5px;
+      }
+    }
+  }
+}
+#Contact_us {
+  .home {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    p {
+      margin: 0;
+    }
+  }
+  .left {
+    .big {
+      p {
+        @include dec("Cabinet Grotesk", normal, 700, 60px, 74px, #0000);
+      }
+    }
+    .boldddd {
+      p {
+       
+        @include dec("Cabinet Grotesk", normal, 700, 30px, 37px, #0000);
+      }
+    }
+    .normal {
+      p {
+        @include dec("Cabinet Grotesk", normal, 400, 20px, 25px, #0000);
+      }
+    }
+  }
+  .contact_list {
+    ul {
+      @include ul-flex(flex-start, flex-start, 10px, 10px 0px);
+      flex-direction: column;
+      li {
+        @include li;
+        a {
+          @include a-dec(
+            none,
+            "Cabinet Grotesk",
+            normal,
+            700,
+            18px,
+            22px,
+            black
+          );
+        }
+      }
+    }
+  }
+}
