@@ -59,3 +59,63 @@
   top: 3px;
   right: 11px;
 }
+@mixin flex($content, $gap, $items, $f-drec) {
+  display: flex;
+  justify-content: $content;
+  gap: $gap;
+  align-items: $items;
+  flex-direction: $f-drec;
+}
+@mixin p-dec($widtj, $color, $tex-al, $puding) {
+  width: $widtj;
+  color: $color;
+  text-align: $tex-al;
+  padding: $puding;
+}
+@mixin block-item(
+  $position,
+  $top,
+  $left,
+  $right,
+  $height,
+  $opacit,
+  $transition,
+  $bg,
+  $width
+) {
+  position: $position;
+  top: $top;
+  left: $left;
+  right: $right;
+  height: $height;
+  opacity: $opacit;
+  transition: $transition;
+  background-color: $bg;
+  width: $width;
+}
+@mixin rabbit-item(
+  $color,
+  $fonts,
+  $position,
+  $top,
+  $left,
+  $transform,
+  $textal,
+  $texdec
+) {
+  color: $color;
+  font-size: $fonts;
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: $transform;
+  text-align: $textal;
+  text-decoration: $texdec;
+}
+@mixin img-parametrs($widtj, $ob-fit, $bor-rad, $display, $heght) {
+  width: $widtj;
+  object-fit: $ob-fit;
+  border-radius: $bor-rad;
+  display: $display;
+  height: $heght;
+}

@@ -20,6 +20,7 @@ nav .nav_list {
 }
 
 nav .nav_list ul {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,6 +115,7 @@ nav .nav_list ul li a:hover {
 #heading .vector1 {
   position: absolute;
   bottom: 0px;
+  cursor: pointer;
 }
 
 #heading .vector1 img {
@@ -122,6 +124,10 @@ nav .nav_list ul li a:hover {
 
 #heading .vector1 p {
   margin: 0;
+}
+
+#heading .vector2 {
+  cursor: pointer;
 }
 
 #heading .vector2 img {
@@ -148,11 +154,11 @@ nav .nav_list ul li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 40px;
-  padding: 8px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 0px;
+  padding: 0px;
 }
 
 #icons .icon li {
@@ -171,29 +177,47 @@ nav .nav_list ul li a:hover {
   transition: 0.3s ease-in-out;
 }
 
-#cardss {
+#cardss .relative {
   position: relative;
-  z-index: 666;
+  width: 100%;
 }
 
-#cardss .card_item img {
-  width: 90%;
+#cardss .relative:hover .block {
+  opacity: 1;
+}
+
+#cardss .relative .card_item img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 5px;
+  display: block;
+  height: auto;
 }
 
-#cardss .block p {
-  font-family: "Cabinet Grotesk";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 63px;
-  color: #913535;
+#cardss .relative .block {
   position: absolute;
-  top: 150px;
-  left: 240px;
-  z-index: +6;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  background-color: #f78225;
+  width: 100%;
+}
+
+#cardss .relative .rabit {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  text-decoration: none;
 }
 
 footer {
@@ -250,21 +274,96 @@ footer .contact_list ul li a:hover {
   transition: 0.3s ease-in-out;
 }
 
+footer .end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 0px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 footer .end .endtext p {
   width: 100%;
-  color: #ffffff;
+  color: white;
   text-align: center;
   padding: 5px;
 }
 
-#Contact_us .home {
+footer .end .icons ul {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+footer .end .icons ul li {
+  list-style: none;
+  list-style-type: none;
+}
+
+footer .end .icons ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  footer .end {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 0px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .end .icons ul {
+    gap: 60px;
+  }
+}
+
+#Contact_us .home {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 #Contact_us .home p {
@@ -277,7 +376,7 @@ footer .end .endtext p {
   font-weight: 700;
   font-size: 60px;
   line-height: 74px;
-  color: #0000;
+  color: black;
 }
 
 #Contact_us .left .boldddd p {
@@ -286,7 +385,7 @@ footer .end .endtext p {
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
-  color: #0000;
+  color: black;
 }
 
 #Contact_us .left .normal p {
@@ -295,7 +394,16 @@ footer .end .endtext p {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
-  color: #0000;
+  color: black;
+}
+
+#Contact_us .contact_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #Contact_us .contact_list ul {
@@ -335,6 +443,253 @@ footer .end .endtext p {
   color: #f78225;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  #Contact_us .contact_list {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+#Rabbit .home {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#Rabbit .home p {
+  margin: 0;
+}
+
+#Rabbit .text_rabbit {
+  width: calc(100% - 400px);
+}
+
+#Rabbit .text_rabbit .bigtext {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  color: black;
+}
+
+#Rabbit .text_rabbit .classic {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  #Rabbit .text_rabbit {
+    width: 100%;
+  }
+  #Rabbit .text_rabbit .bigtext {
+    font-family: "Cabinet Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 30px;
+    color: black;
+  }
+  #Rabbit .text_rabbit .classic {
+    font-family: "Cabinet Grotesk";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: black;
+  }
+}
+
+#images .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  display: black;
+  height: auto;
+}
+
+#end .text-end {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: black;
+}
+
+#end .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  display: black;
+  height: auto;
+}
+
+#Who_we_are .image_monke img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px;
+  display: block;
+  height: auto;
+}
+
+#Who_we_are .home {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#Who_we_are .home p {
+  margin: 0;
+}
+
+#Who_we_are .left .big p {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  color: black;
+}
+
+#Who_we_are .left .boldddd p {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  color: black;
+}
+
+#Who_we_are .left .normal p {
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: black;
+}
+
+#head_monke .start_text {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 25px;
+  color: black;
+}
+
+#head_monke .monkeimage img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px;
+  display: block;
+  height: auto;
+}
+
+#What_we_do .start_text {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 25px;
+  color: black;
+}
+
+#What_we_do .what_image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px;
+  display: block;
+  height: auto;
+}
+
+#What_we_do .waht_tems .buttonss button {
+  border: none;
+  background-color: black;
+  padding: 11px 31px;
+}
+
+#What_we_do .waht_tems .buttonss button a {
+  text-decoration: none;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+}
+
+#What_we_do .waht_tems .buttonss button a:hover {
+  color: #f78225;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+#What_we_do .waht_tems .texttb {
+  margin-top: 15px;
+  font-family: "Cabinet Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: black;
 }
 
 *,
