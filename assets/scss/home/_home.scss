@@ -3,13 +3,14 @@ nav {
   z-index: +1;
   .row {
     position: fixed;
-    background-color: $maincolor;
     left: 0;
     top: 0;
     width: 100%;
     .main_logo {
       img {
-        @include img-nav(#fff, 70%, cover);
+        width: 100%;
+        object-fit: cover;
+        height: 96px;
       }
     }
     .burger {
@@ -18,11 +19,12 @@ nav {
       }
     }
     .col-lg-9 {
+      background-color: $maincolor;
+      height: 96px;
       .nav_list {
-        background-color: $maincolor;
         ul {
           margin: 0;
-          @include ul-flex(center, flex-end, 40px, 12px);
+          @include ul-flex(center, flex-end, 40px, 30px);
           li {
             @include li;
             a {
@@ -110,7 +112,7 @@ nav {
 }
 #icons {
   .icon {
-    @include ul-flex(center, space-evenly, 0px, 0px);
+    @include ul-flex(center, space-evenly, 20px, 0px);
     li {
       @include li;
       a {

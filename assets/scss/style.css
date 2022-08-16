@@ -5,25 +5,25 @@ nav {
 
 nav .row {
   position: fixed;
-  background-color: black;
   left: 0;
   top: 0;
   width: 100%;
 }
 
 nav .row .main_logo img {
-  background-color: #fff;
-  max-width: 70%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  height: 96px;
 }
 
 nav .row .burger img {
   display: none;
 }
 
-nav .row .col-lg-9 .nav_list {
+nav .row .col-lg-9 {
   background-color: black;
+  height: 96px;
 }
 
 nav .row .col-lg-9 .nav_list ul {
@@ -38,7 +38,7 @@ nav .row .col-lg-9 .nav_list ul {
       -ms-flex-pack: end;
           justify-content: flex-end;
   gap: 40px;
-  padding: 12px;
+  padding: 30px;
 }
 
 nav .row .col-lg-9 .nav_list ul li {
@@ -164,7 +164,7 @@ nav .row .col-lg-9 .nav_list ul li a:hover {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  gap: 0px;
+  gap: 20px;
   padding: 0px;
 }
 
