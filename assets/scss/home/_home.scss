@@ -1,34 +1,42 @@
 nav {
   position: relative;
-  z-index: +3;
-  background-color: black;
-  .main_logo {
-    img {
-      @include img-nav(#fff, 70%, cover);
-    }
-  }
-  .burger {
-    img {
-      display: none;
-    }
-  }
-  .nav_list {
+  z-index: +1;
+  .row {
+    position: fixed;
     background-color: $maincolor;
-    ul {
-      margin: 0;
-      @include ul-flex(center, flex-end, 40px, 12px);
-      li {
-        @include li;
-        a {
-          @include a-dec(
-            none,
-            "Cabinet Grotesk",
-            normal,
-            700,
-            18px,
-            22px,
-            #ffffff
-          );
+    left: 0;
+    top: 0;
+    width: 100%;
+    .main_logo {
+      img {
+        @include img-nav(#fff, 70%, cover);
+      }
+    }
+    .burger {
+      img {
+        display: none;
+      }
+    }
+    .col-lg-9 {
+      .nav_list {
+        background-color: $maincolor;
+        ul {
+          margin: 0;
+          @include ul-flex(center, flex-end, 40px, 12px);
+          li {
+            @include li;
+            a {
+              @include a-dec(
+                none,
+                "Cabinet Grotesk",
+                normal,
+                700,
+                18px,
+                22px,
+                #ffffff
+              );
+            }
+          }
         }
       }
     }
@@ -211,6 +219,7 @@ footer {
   }
 }
 #Contact_us {
+  margin-top: 100px;
   .home {
     cursor: pointer;
     @include flex(flex-start, 10px, center, row);
@@ -236,32 +245,13 @@ footer {
     }
   }
   .contact_list {
-    display: flex;
-    justify-content: center;
-    ul {
-      @include ul-flex(flex-start, flex-start, 10px, 10px 0px);
-      flex-direction: column;
-      li {
-        @include li;
-        a {
-          @include a-dec(
-            none,
-            "Cabinet Grotesk",
-            normal,
-            700,
-            18px,
-            22px,
-            black
-          );
-        }
-      }
-    }
-    @media (max-width: 768px) {
-      justify-content: flex-start;
+    img {
+      @include img-parametrs(100%, cover, 5px, block, auto);
     }
   }
 }
 #Rabbit {
+  margin-top: 100px;
   .home {
     cursor: pointer;
     @include flex(flex-start, 10px, center, row);
@@ -311,6 +301,7 @@ footer {
   }
 }
 #Who_we_are {
+  margin-top: 100px;
   .image_monke {
     img {
       @include img-parametrs(100%, cover, 0px, block, auto);
@@ -389,4 +380,11 @@ footer {
       @include dec("Cabinet Grotesk", normal, 400, 18px, 20px, black);
     }
   }
+}
+#preloader {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: black url(/image/Loading.gif);
+  z-index: 666;
 }

@@ -1,25 +1,32 @@
 nav {
   position: relative;
-  z-index: +3;
-  background-color: black;
+  z-index: +1;
 }
 
-nav .main_logo img {
+nav .row {
+  position: fixed;
+  background-color: black;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+nav .row .main_logo img {
   background-color: #fff;
   max-width: 70%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-nav .burger img {
+nav .row .burger img {
   display: none;
 }
 
-nav .nav_list {
+nav .row .col-lg-9 .nav_list {
   background-color: black;
 }
 
-nav .nav_list ul {
+nav .row .col-lg-9 .nav_list ul {
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,12 +41,12 @@ nav .nav_list ul {
   padding: 12px;
 }
 
-nav .nav_list ul li {
+nav .row .col-lg-9 .nav_list ul li {
   list-style: none;
   list-style-type: none;
 }
 
-nav .nav_list ul li a {
+nav .row .col-lg-9 .nav_list ul li a {
   text-decoration: none;
   font-family: "Cabinet Grotesk";
   font-style: normal;
@@ -49,7 +56,7 @@ nav .nav_list ul li a {
   color: #ffffff;
 }
 
-nav .nav_list ul li a:hover {
+nav .row .col-lg-9 .nav_list ul li a:hover {
   color: #f78225;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -348,6 +355,10 @@ footer .end .icons ul li a {
   }
 }
 
+#Contact_us {
+  margin-top: 100px;
+}
+
 #Contact_us .home {
   cursor: pointer;
   display: -webkit-box;
@@ -397,60 +408,17 @@ footer .end .icons ul li a {
   color: black;
 }
 
-#Contact_us .contact_list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+#Contact_us .contact_list img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  display: block;
+  height: auto;
 }
 
-#Contact_us .contact_list ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 10px;
-  padding: 10px 0px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#Contact_us .contact_list ul li {
-  list-style: none;
-  list-style-type: none;
-}
-
-#Contact_us .contact_list ul li a {
-  text-decoration: none;
-  font-family: "Cabinet Grotesk";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  color: black;
-}
-
-#Contact_us .contact_list ul li a:hover {
-  color: #f78225;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-}
-
-@media (max-width: 768px) {
-  #Contact_us .contact_list {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
+#Rabbit {
+  margin-top: 100px;
 }
 
 #Rabbit .home {
@@ -551,6 +519,10 @@ footer .end .icons ul li a {
   border-radius: 5px;
   display: black;
   height: auto;
+}
+
+#Who_we_are {
+  margin-top: 100px;
 }
 
 #Who_we_are .image_monke img {
@@ -692,6 +664,14 @@ footer .end .icons ul li a {
   color: black;
 }
 
+#preloader {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: black url(/image/Loading.gif);
+  z-index: 666;
+}
+
 *,
 *::after,
 *::before {
@@ -700,5 +680,14 @@ footer .end .icons ul li a {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   outline: none;
+}
+
+@font-face {
+  font-family: Gentium;
+  src: url();
+}
+
+p {
+  font-family: Gentium, serif;
 }
 /*# sourceMappingURL=style.css.map */

@@ -10,3 +10,11 @@
   box-sizing: border-box;
   outline: none;
 }
+@font-face {
+  font-family: Gentium;
+  src: url();
+}
+
+p {
+  font-family: Gentium, serif;
+}
