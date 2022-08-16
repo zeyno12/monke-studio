@@ -12,7 +12,10 @@ if(burger){
     })
 }
 //preloader
-var loader=document.getElementById("preloader");
-window.addEventListener("load", function() {
-  loader.style.display="none"
+var  loader=document.getElementById("preloader");
+window.addEventListener("load",function () {
+  loader.style.display="none";
+  setTimeout(function(){        
+    $('#load').delay(150).fadeOut('slow'); 
+}, 30000);
 })

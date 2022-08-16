@@ -11,10 +11,10 @@
   outline: none;
 }
 @font-face {
-  font-family: Gentium;
-  src: url();
+  font-family: "CabinetGrotesk";
+  src: url(../font/CabinetGrotesk-Black.otf) format(opentype);
 }
 
 p {
-  font-family: Gentium, serif;
+  font-family: "CabinetGrotesk", serif;
 }

@@ -382,9 +382,21 @@ footer {
   }
 }
 #preloader {
-  position: fixed;
+  background: #17131c url(/image/Loading.gif) no-repeat center center;
+  background-size: 10%;
   height: 100vh;
   width: 100%;
-  background-color: black url(/image/Loading.gif);
-  z-index: 666;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  .zeynush {
+    animation: zeynab 3s forwards;
+  }
+  @keyframes zeynab {
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 }

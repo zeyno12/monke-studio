@@ -665,11 +665,33 @@ footer .end .icons ul li a {
 }
 
 #preloader {
-  position: fixed;
+  background: #17131c url(/image/Loading.gif) no-repeat center center;
+  background-size: 10%;
   height: 100vh;
   width: 100%;
-  background-color: black url(/image/Loading.gif);
-  z-index: 666;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#preloader .zeynush {
+  -webkit-animation: zeynab 3s forwards;
+          animation: zeynab 3s forwards;
+}
+
+@-webkit-keyframes zeynab {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes zeynab {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 *,
@@ -683,11 +705,11 @@ footer .end .icons ul li a {
 }
 
 @font-face {
-  font-family: Gentium;
-  src: url();
+  font-family: "CabinetGrotesk";
+  src: url(../font/CabinetGrotesk-Black.otf) format(opentype);
 }
 
 p {
-  font-family: Gentium, serif;
+  font-family: "CabinetGrotesk", serif;
 }
 /*# sourceMappingURL=style.css.map */
