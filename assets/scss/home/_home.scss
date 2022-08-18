@@ -2,20 +2,10 @@ nav {
   position: relative;
   z-index: +1;
   .row {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+    @include rowfixed;
     .main_logo {
       img {
-        width: 100%;
-        object-fit: cover;
-        height: 96px;
-      }
-    }
-    .burger {
-      img {
-        display: none;
+        @include image(100%, cover, 96px);
       }
     }
     .col-lg-9 {
@@ -28,15 +18,7 @@ nav {
           li {
             @include li;
             a {
-              @include a-dec(
-                none,
-                "Cabinet Grotesk",
-                normal,
-                700,
-                18px,
-                22px,
-                #ffffff
-              );
+              @include a-dec(none, normal, 500, 16px, 20px, #ffffff);
             }
           }
         }
@@ -44,45 +26,68 @@ nav {
     }
   }
 }
+#responsiv_navbar {
+  height: 0;
+  visibility: hidden;
+}
 @media (max-width: 768px) {
-  .main_logo {
-    img {
-      width: 37%;
-    }
-  }
-  .nav_list {
-    ul {
-      display: flex;
-      flex-direction: column;
-    }
-    @include medialist(
-      55px,
-      absolute,
-      100%,
-      0,
-      0,
-      black,
-      #fff,
-      translateX(-500px)
-    );
-  }
-  .burger {
-    img {
-      @include imgmedia;
-    }
+  nav {
+    display: none;
   }
   .vector1 {
     right: 0;
   }
+  #responsiv_navbar {
+    @include responsiv_navbar(fixed, 0, 0, +11, 100%, visible);
+    .res_logo {
+      img {
+        @include image(100%, 70px, cover);
+      }
+    }
+    .rea_list {
+      @include rea_list;
+      .sidepanel {
+        @include sidepanel(
+          250px,
+          0,
+          fixed,
+          1,
+          0,
+          0,
+          #111,
+          hidden,
+          60px,
+          0.5s ease-in-out
+        );
+        a {
+          @include sidepanel-a(
+            8px 8px 8px 32px,
+            none,
+            20px,
+            #ffffff,
+            block,
+            0.5s ease-in-out
+          );
+        }
+        .closebtn {
+          @include closebtn;
+        }
+      }
+      .openbtn {
+        @include openbtn;
+      }
+    }
+  }
 }
 #heading {
+  margin-top: 100px;
   position: relative;
   .text_vector {
     .bold {
-      @include dec("Cabinet Grotesk", normal, 700, 30px, 37px, black);
+      @include dec(normal, 600, 25px, 30px, black);
     }
     p {
-      @include dec("Cabinet Grotesk", normal, 400, 18px, 25px, black);
+      @include dec(normal, 300, 16px, 20px, black);
     }
   }
   .vector1 {
@@ -98,8 +103,9 @@ nav {
   }
   .vector2 {
     cursor: pointer;
+    margin-top: 50px;
     img {
-      width: 19%;
+      max-width: 22%;
     }
   }
   .animation {
@@ -112,7 +118,7 @@ nav {
 }
 #icons {
   .icon {
-    @include ul-flex(center, space-evenly, 20px, 0px);
+    @include ul-flex(center, space-around, 20px, 0px);
     li {
       @include li;
       a {
@@ -144,7 +150,7 @@ nav {
         100%,
         0,
         0.3s ease-in-out,
-        $gold,
+        #f7842583,
         100%
       );
     }
@@ -177,15 +183,7 @@ footer {
       li {
         @include li;
         a {
-          @include a-dec(
-            none,
-            "Cabinet Grotesk",
-            normal,
-            700,
-            18px,
-            22px,
-            #ffffff
-          );
+          @include a-dec(none, normal, 500, 16px, 20px, #ffffff);
         }
       }
     }
@@ -194,7 +192,7 @@ footer {
     @include flex(flex-end, 0px, center, row);
     .endtext {
       p {
-        @include p-dec(100%, white, center, 5px);
+        @include p-dec(100%, white, center, 0px 25px);
       }
     }
     .icons {
@@ -214,7 +212,12 @@ footer {
       @include flex(flex-start, 0px, flex-start, column);
       .icons {
         ul {
-          gap: 60px;
+          gap: 50px;
+        }
+      }
+      .endtext {
+        p {
+          padding: 0px 6px;
         }
       }
     }
@@ -223,6 +226,7 @@ footer {
 #Contact_us {
   margin-top: 100px;
   .home {
+    padding: 10px;
     cursor: pointer;
     @include flex(flex-start, 10px, center, row);
     p {
@@ -232,17 +236,17 @@ footer {
   .left {
     .big {
       p {
-        @include dec("Cabinet Grotesk", normal, 700, 60px, 74px, $maincolor);
+        @include dec(normal, 600, 55px, 67px, $maincolor);
       }
     }
     .boldddd {
       p {
-        @include dec("Cabinet Grotesk", normal, 700, 30px, 37px, $maincolor);
+        @include dec(normal, 600, 25px, 30px, $maincolor);
       }
     }
     .normal {
       p {
-        @include dec("Cabinet Grotesk", normal, 400, 20px, 25px, $maincolor);
+        @include dec(normal, 300, 18px, 20px, $maincolor);
       }
     }
   }
@@ -256,6 +260,7 @@ footer {
   margin-top: 100px;
   .home {
     cursor: pointer;
+    padding: 10px;
     @include flex(flex-start, 10px, center, row);
     p {
       margin: 0;
@@ -264,20 +269,20 @@ footer {
   .text_rabbit {
     width: calc(100% - 400px);
     .bigtext {
-      @include dec("Cabinet Grotesk", normal, 700, 60px, 70px, black);
+      @include dec(normal, 700, 60px, 70px, black);
     }
     .classic {
-      @include dec("Cabinet Grotesk", normal, 400, 16px, 20px, black);
+      @include dec(normal, 400, 16px, 20px, black);
     }
   }
   @media (max-width: 768px) {
     .text_rabbit {
       width: 100%;
       .bigtext {
-        @include dec("Cabinet Grotesk", normal, 700, 30px, 30px, black);
+        @include dec(normal, 700, 30px, 30px, black);
       }
       .classic {
-        @include dec("Cabinet Grotesk", normal, 400, 12px, 14px, black);
+        @include dec(normal, 400, 12px, 14px, black);
       }
     }
   }
@@ -294,7 +299,7 @@ footer {
     justify-content: start;
     display: flex;
     margin-top: 20px;
-    @include dec("Cabinet Grotesk", normal, 700, 40px, 40px, black);
+    @include dec(normal, 700, 40px, 40px, black);
   }
   .image {
     img {
@@ -311,6 +316,7 @@ footer {
   }
   .home {
     cursor: pointer;
+    padding: 10px;
     @include flex(flex-start, 10px, center, row);
     p {
       margin: 0;
@@ -319,17 +325,17 @@ footer {
   .left {
     .big {
       p {
-        @include dec("Cabinet Grotesk", normal, 700, 50px, 60px, $maincolor);
+        @include dec(normal, 600, 45px, 50px, $maincolor);
       }
     }
     .boldddd {
       p {
-        @include dec("Cabinet Grotesk", normal, 700, 30px, 37px, $maincolor);
+        @include dec(normal, 600, 25px, 30px, $maincolor);
       }
     }
     .normal {
       p {
-        @include dec("Cabinet Grotesk", normal, 400, 20px, 25px, $maincolor);
+        @include dec(normal, 300, 18px, 20px, $maincolor);
       }
     }
   }
@@ -339,7 +345,7 @@ footer {
     justify-content: start;
     display: flex;
     margin-top: 20px;
-    @include dec("Cabinet Grotesk", normal, 600, 25px, 25px, black);
+    @include dec(\normal, 600, 25px, 25px, black);
   }
   .monkeimage {
     img {
@@ -351,7 +357,7 @@ footer {
   .start_text {
     justify-content: start;
     display: flex;
-    @include dec("Cabinet Grotesk", normal, 600, 25px, 25px, black);
+    @include dec(normal, 600, 25px, 25px, black);
   }
   .what_image {
     img {
@@ -365,40 +371,22 @@ footer {
         background-color: $maincolor;
         padding: 11px 31px;
         a {
-          @include a-dec(
-            none,
-            "Cabinet Grotesk",
-            normal,
-            700,
-            20px,
-            27px,
-            #ffffff
-          );
+          @include a-dec(none, normal, 700, 20px, 27px, white);
         }
       }
     }
     .texttb {
       margin-top: 15px;
-      @include dec("Cabinet Grotesk", normal, 400, 18px, 20px, black);
+      @include dec(normal, 400, 18px, 20px, black);
     }
   }
 }
+body {
+  overflow: hidden;
+}
 #preloader {
-  background: #17131c url(/image/Loading.gif) no-repeat center center;
-  background-size: 10%;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  .zeynush {
-    animation: zeynab 3s forwards;
-  }
-  @keyframes zeynab {
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
+  @include preloader;
+}
+#status {
+  @include status;
 }

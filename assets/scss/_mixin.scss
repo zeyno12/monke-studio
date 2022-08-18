@@ -14,9 +14,8 @@
   list-style: none;
   list-style-type: none;
 }
-@mixin a-dec($tdec, $fontf, $fontsty, $fontw, $fonts, $lineh, $color) {
+@mixin a-dec($tdec, $fontsty, $fontw, $fonts, $lineh, $color) {
   text-decoration: $tdec;
-  font-family: $fontf;
   font-style: $fontsty;
   font-weight: $fontw;
   font-size: $fonts;
@@ -35,8 +34,7 @@
     transition: 0.3s ease-in-out;
   }
 }
-@mixin dec($fontf, $fontsty, $fontw, $fonts, $lineh, $color) {
-  font-family: $fontf;
+@mixin dec($fontsty, $fontw, $fonts, $lineh, $color) {
   font-style: $fontsty;
   font-weight: $fontw;
   font-size: $fonts;
@@ -118,4 +116,101 @@
   border-radius: $bor-rad;
   display: $display;
   height: $heght;
+}
+@mixin image($width, $ob-fit, $height) {
+  width: $width;
+  object-fit: $ob-fit;
+  height: $height;
+}
+@mixin rowfixed {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+@mixin responsiv_navbar($position, $left, $top, $zidex, $width, $visible) {
+  position: $position;
+  left: $left;
+  top: $top;
+  z-index: $zidex;
+  width: $width;
+  visibility: $visible;
+  display: flex;
+}
+@mixin rea_list {
+  height: 70px;
+  background-color: #111;
+  width: 50%;
+}
+@mixin sidepanel(
+  $heght,
+  $width,
+  $position,
+  $zindex,
+  $top,
+  $left,
+  $bg,
+  $oveflow,
+  $p-t,
+  $transition
+) {
+  height: $heght;
+  width: $width;
+  position: $position;
+  z-index: $zindex;
+  top: $top;
+  left: $left;
+  background-color: $bg;
+  overflow-x: $oveflow;
+  padding-top: $p-t;
+  transition: $transition;
+}
+@mixin sidepanel-a($puding, $text-dec, $font-s, $color, $display, $trnsition) {
+  padding: $puding;
+  text-decoration: $text-dec;
+  font-size: $font-s;
+  color: $color;
+  display: $display;
+  transition: $trnsition;
+  &:hover {
+    color: #ff951c;
+  }
+}
+@mixin closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@mixin openbtn {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 17px 15px;
+  border: none;
+}
+@mixin preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 99;
+}
+@mixin status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(/image/Loading.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
 }

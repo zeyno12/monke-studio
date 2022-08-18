@@ -1,21 +1,13 @@
 // burger
-const burger=document.querySelector(".burger");
-if(burger){
-  burger.addEventListener("click", function () {
-      const mobilnav = document.querySelector(".nav_list");
-      if (mobilnav.style.transform == "translateX(-500px)") {
-        mobilnav.style.transform = "translateX(0px)";
-      }
-      else  {
-        mobilnav.style.transform = "translateX(-500px)";
-      }
-    })
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
 }
 //preloader
-var  loader=document.getElementById("preloader");
-window.addEventListener("load",function () {
-  loader.style.display="none";
-  setTimeout(function(){        
-    $('#load').delay(150).fadeOut('slow'); 
-}, 30000);
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#status').fadeOut(); // will first fade out the loading animation 
+  $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+  $('body').delay(350).css({'overflow':'visible'});
 })

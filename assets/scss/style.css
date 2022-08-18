@@ -17,10 +17,6 @@ nav .row .main_logo img {
   height: 96px;
 }
 
-nav .row .burger img {
-  display: none;
-}
-
 nav .row .col-lg-9 {
   background-color: black;
   height: 96px;
@@ -48,11 +44,10 @@ nav .row .col-lg-9 .nav_list ul li {
 
 nav .row .col-lg-9 .nav_list ul li a {
   text-decoration: none;
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
 }
 
@@ -62,60 +57,108 @@ nav .row .col-lg-9 .nav_list ul li a:hover {
   transition: 0.3s ease-in-out;
 }
 
+#responsiv_navbar {
+  height: 0;
+  visibility: hidden;
+}
+
 @media (max-width: 768px) {
-  .main_logo img {
-    width: 37%;
-  }
-  .nav_list {
-    margin-top: 55px;
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background-color: black;
-    color: #fff;
-    -webkit-transform: t translateX(-500px);
-            transform: t translateX(-500px);
-  }
-  .nav_list ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .burger img {
-    display: block !important;
-    position: absolute;
-    top: 3px;
-    right: 11px;
+  nav {
+    display: none;
   }
   .vector1 {
     right: 0;
   }
+  #responsiv_navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 11;
+    width: 100%;
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #responsiv_navbar .res_logo img {
+    width: 100%;
+    -o-object-fit: 70px;
+       object-fit: 70px;
+    height: cover;
+  }
+  #responsiv_navbar .rea_list {
+    height: 70px;
+    background-color: #111;
+    width: 50%;
+  }
+  #responsiv_navbar .rea_list .sidepanel {
+    height: 250px;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  #responsiv_navbar .rea_list .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+  #responsiv_navbar .rea_list .sidepanel a:hover {
+    color: #ff951c;
+  }
+  #responsiv_navbar .rea_list .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  #responsiv_navbar .rea_list .openbtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    width: 100%;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 17px 15px;
+    border: none;
+  }
 }
 
 #heading {
+  margin-top: 100px;
   position: relative;
 }
 
 #heading .text_vector .bold {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 37px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
   color: black;
 }
 
 #heading .text_vector p {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
   color: black;
 }
 
@@ -135,10 +178,11 @@ nav .row .col-lg-9 .nav_list ul li a:hover {
 
 #heading .vector2 {
   cursor: pointer;
+  margin-top: 50px;
 }
 
 #heading .vector2 img {
-  width: 19%;
+  max-width: 22%;
 }
 
 #heading .animation {
@@ -161,9 +205,8 @@ nav .row .col-lg-9 .nav_list ul li a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   gap: 20px;
   padding: 0px;
 }
@@ -211,7 +254,7 @@ nav .row .col-lg-9 .nav_list ul li a:hover {
   opacity: 0;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
-  background-color: #f78225;
+  background-color: #f7842583;
   width: 100%;
 }
 
@@ -266,11 +309,10 @@ footer .contact_list ul li {
 footer .footer_list1 ul li a,
 footer .contact_list ul li a {
   text-decoration: none;
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
 }
 
@@ -302,7 +344,7 @@ footer .end .endtext p {
   width: 100%;
   color: white;
   text-align: center;
-  padding: 5px;
+  padding: 0px 25px;
 }
 
 footer .end .icons ul {
@@ -351,7 +393,10 @@ footer .end .icons ul li a {
             flex-direction: column;
   }
   footer .end .icons ul {
-    gap: 60px;
+    gap: 50px;
+  }
+  footer .end .endtext p {
+    padding: 0px 6px;
   }
 }
 
@@ -360,6 +405,7 @@ footer .end .icons ul li a {
 }
 
 #Contact_us .home {
+  padding: 10px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -382,29 +428,26 @@ footer .end .icons ul li a {
 }
 
 #Contact_us .left .big p {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 74px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 67px;
   color: black;
 }
 
 #Contact_us .left .boldddd p {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 37px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
   color: black;
 }
 
 #Contact_us .left .normal p {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 25px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
   color: black;
 }
 
@@ -423,6 +466,7 @@ footer .end .icons ul li a {
 
 #Rabbit .home {
   cursor: pointer;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,7 +492,6 @@ footer .end .icons ul li a {
 }
 
 #Rabbit .text_rabbit .bigtext {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
   font-weight: 700;
   font-size: 60px;
@@ -457,7 +500,6 @@ footer .end .icons ul li a {
 }
 
 #Rabbit .text_rabbit .classic {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -470,7 +512,6 @@ footer .end .icons ul li a {
     width: 100%;
   }
   #Rabbit .text_rabbit .bigtext {
-    font-family: "Cabinet Grotesk";
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
@@ -478,7 +519,6 @@ footer .end .icons ul li a {
     color: black;
   }
   #Rabbit .text_rabbit .classic {
-    font-family: "Cabinet Grotesk";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -504,7 +544,6 @@ footer .end .icons ul li a {
   display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
-  font-family: "Cabinet Grotesk";
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -536,6 +575,7 @@ footer .end .icons ul li a {
 
 #Who_we_are .home {
   cursor: pointer;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -557,29 +597,26 @@ footer .end .icons ul li a {
 }
 
 #Who_we_are .left .big p {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 60px;
+  font-weight: 600;
+  font-size: 45px;
+  line-height: 50px;
   color: black;
 }
 
 #Who_we_are .left .boldddd p {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 37px;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 30px;
   color: black;
 }
 
 #Who_we_are .left .normal p {
-  font-family: "Cabinet Grotesk";
   font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 25px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 20px;
   color: black;
 }
 
@@ -591,8 +628,7 @@ footer .end .icons ul li a {
   display: -ms-flexbox;
   display: flex;
   margin-top: 20px;
-  font-family: "Cabinet Grotesk";
-  font-style: normal;
+  font-style: \normal;
   font-weight: 600;
   font-size: 25px;
   line-height: 25px;
@@ -615,7 +651,6 @@ footer .end .icons ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-family: "Cabinet Grotesk";
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
@@ -640,12 +675,11 @@ footer .end .icons ul li a {
 
 #What_we_do .waht_tems .buttonss button a {
   text-decoration: none;
-  font-family: "Cabinet Grotesk";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 27px;
-  color: #ffffff;
+  color: white;
 }
 
 #What_we_do .waht_tems .buttonss button a:hover {
@@ -656,7 +690,6 @@ footer .end .icons ul li a {
 
 #What_we_do .waht_tems .texttb {
   margin-top: 15px;
-  font-family: "Cabinet Grotesk";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -664,34 +697,30 @@ footer .end .icons ul li a {
   color: black;
 }
 
+body {
+  overflow: hidden;
+}
+
 #preloader {
-  background: #17131c url(/image/Loading.gif) no-repeat center center;
-  background-size: 10%;
-  height: 100vh;
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 100;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  z-index: 99;
 }
 
-#preloader .zeynush {
-  -webkit-animation: zeynab 3s forwards;
-          animation: zeynab 3s forwards;
-}
-
-@-webkit-keyframes zeynab {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-@keyframes zeynab {
-  100% {
-    opacity: 0;
-    visibility: hidden;
-  }
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(/image/Loading.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -100px 0 0 -100px;
 }
 
 *,
@@ -706,7 +735,7 @@ footer .end .icons ul li a {
 
 @font-face {
   font-family: "CabinetGrotesk";
-  src: url(../font/CabinetGrotesk-Black.otf) format(opentype);
+  src: url(../font/CabinetGrotesk-Medium.otf) format(opentype);
 }
 
 p {
