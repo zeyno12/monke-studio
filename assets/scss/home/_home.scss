@@ -41,7 +41,7 @@ nav {
     @include responsiv_navbar(fixed, 0, 0, +11, 100%, visible);
     .res_logo {
       img {
-        @include image(100%, 70px, cover);
+        @include image(100%, cover, 70px);
       }
     }
     .rea_list {

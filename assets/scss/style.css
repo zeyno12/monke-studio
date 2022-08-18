@@ -82,9 +82,9 @@ nav .row .col-lg-9 .nav_list ul li a:hover {
   }
   #responsiv_navbar .res_logo img {
     width: 100%;
-    -o-object-fit: 70px;
-       object-fit: 70px;
-    height: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 70px;
   }
   #responsiv_navbar .rea_list {
     height: 70px;
