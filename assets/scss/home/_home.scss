@@ -54,7 +54,7 @@ nav {
           1,
           0,
           0,
-          #111,
+          $maincolor,
           hidden,
           60px,
           0.5s ease-in-out
@@ -212,7 +212,7 @@ footer {
       @include flex(flex-start, 0px, flex-start, column);
       .icons {
         ul {
-          gap: 50px;
+          gap: 40px;
         }
       }
       .endtext {

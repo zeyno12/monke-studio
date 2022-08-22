@@ -139,7 +139,7 @@
 }
 @mixin rea_list {
   height: 70px;
-  background-color: #111;
+  background-color: $maincolor;
   width: 50%;
 }
 @mixin sidepanel(
@@ -189,7 +189,7 @@
   width: 100%;
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
+  background-color: $maincolor;
   color: white;
   padding: 17px 15px;
   border: none;
@@ -200,7 +200,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: black;
+  background-color: $maincolor;
   z-index: 99;
 }
 @mixin status {

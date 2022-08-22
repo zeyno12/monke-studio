@@ -88,7 +88,7 @@ nav .row .col-lg-9 .nav_list ul li a:hover {
   }
   #responsiv_navbar .rea_list {
     height: 70px;
-    background-color: #111;
+    background-color: black;
     width: 50%;
   }
   #responsiv_navbar .rea_list .sidepanel {
@@ -98,7 +98,7 @@ nav .row .col-lg-9 .nav_list ul li a:hover {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: black;
     overflow-x: hidden;
     padding-top: 60px;
     -webkit-transition: 0.5s ease-in-out;
@@ -134,7 +134,7 @@ nav .row .col-lg-9 .nav_list ul li a:hover {
     width: 100%;
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: black;
     color: white;
     padding: 17px 15px;
     border: none;
@@ -393,7 +393,7 @@ footer .end .icons ul li a {
             flex-direction: column;
   }
   footer .end .icons ul {
-    gap: 50px;
+    gap: 40px;
   }
   footer .end .endtext p {
     padding: 0px 6px;
