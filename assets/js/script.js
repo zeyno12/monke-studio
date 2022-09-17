@@ -1,10 +1,4 @@
-// burger
-function openNav() {
-  document.getElementById("mySidepanel").style.width = "250px";
-}
-function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
-}
+
 //preloader
 $(window).on('load', function() { // makes sure the whole site is loaded 
   $('#status').fadeOut(); // will first fade out the loading animation 

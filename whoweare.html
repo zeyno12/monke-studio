@@ -1,261 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/scss/style.css">
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="assets/scss/style.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
     <!-- Preloader -->
-<div id="preloader">
-    <div id="status">&nbsp;</div>
-  </div>
-  <nav>
-    <div class="container mt-5">
+    <div id="preloader">
+      <div id="status">&nbsp;</div>
+    </div>
+    <nav>
+      <div class="container mt-5">
         <div class="row align-items-center">
-            <div class="col-lg-3 p-0">
-               <div class="main_logo">
-                <img src="image/monkeelogo.png" alt="logo">
+          <div class="col-lg-3 p-0">
+            <div class="main_logo">
+              <img src="image/monkeelogo.png" alt="logo" />
             </div>
+          </div>
+          <div class="col-lg-9 p-0">
+            <div class="nav_list">
+              <ul>
+                <li><a href="whoweare.html">Who we are</a></li>
+                <li><a href="#">Cases</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
             </div>
-            <div class="col-lg-9 p-0">
-                <div class="nav_list">
-                    <ul>
-                        <li><a href="whoweare.html">Who we are</a></li>
-                        <li><a href="#">Cases</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-</nav>
-<div id="responsiv_navbar">
-    <div class="res_logo">
-        <img src="image/monkeelogo.png" alt="">
-    </div>
-    <div class="rea_list">
+      </div>
+    </nav>
+    <div id="responsiv_navbar">
+      <div class="res_logo">
+        <img src="image/monkeelogo.png" alt="" />
+      </div>
+      <div class="rea_list">
         <div id="mySidepanel" class="sidepanel">
-           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-               <path d="M-0.00949333 20.0016C-0.00949358 31.036 8.96708 40.0126 20.0015 40.0126C31.0358 40.0126 40.0124 31.036 40.0124 20.0016C40.0124 14.4844 37.7689 9.48229 34.1461 5.85947C30.5233 2.23664 25.5211 -0.00688191 20.0039 -0.00688191C8.96709 -0.00935677 -0.00949029 8.96722 -0.00949333 20.0016ZM19.999 1.74138C30.0676 1.74138 38.2592 9.93297 38.2592 20.0016C38.2592 30.0702 30.0676 38.2618 19.999 38.2618C14.9647 38.2593 10.4009 36.2114 7.09501 32.9056C3.9823 29.7929 1.9864 25.5634 1.76354 20.8782L26.0114 20.8782L20.628 25.8803L21.8215 27.1631L29.5228 20.0016L21.8215 12.8401L20.628 14.1229L26.009 19.1225L1.76354 19.125C2.21918 9.46248 10.225 1.74386 19.999 1.74138Z" fill="white"/>
-               </svg></a>
-           <a href="whoweare.html">Who we are</a>
-           <a href="#">Cases</a>
-           <a href="contact.html">Contact</a>
-         </div>
-         <button class="openbtn" onclick="openNav()"><svg width="30" height="30" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-           <path d="M40.0127 20.0019C40.0127 8.96752 31.0361 -0.00905445 20.0017 -0.00905319C8.96733 -0.00905217 -0.00925053 8.96753 -0.00925256 20.0019C-0.00925155 25.5191 2.23427 30.5212 5.85709 34.144C9.47992 37.7669 14.482 40.0104 19.9992 40.0104C31.0361 40.0129 40.0127 31.0363 40.0127 20.0019ZM20.0042 38.2621C9.93556 38.2621 1.74396 30.0705 1.74396 20.0019C1.74397 9.93328 9.93556 1.74169 20.0042 1.74169C25.0385 1.74416 29.6023 3.79206 32.9082 7.09792C36.0209 10.2106 38.0168 14.4401 38.2396 19.1253L13.9917 19.1253L19.3752 14.1232L18.1816 12.8405L10.4803 20.0019L18.1816 27.1634L19.3752 25.8806L13.9942 20.881L38.2396 20.8785C37.784 30.541 29.7781 38.2596 20.0042 38.2621Z" fill="white"/>
-           </svg></button>
-    </div>
-</div> 
-    <main>
-        <section id="Who_we_are">
-        <div class="container">
-        <div class="row  mt-5">
-        <div class="home">
-            <div class="img_home">
-                <a href="index.html"><img src="image/Vector (15).png" alt=""></a>
-            </div>
-            <div class="text_home">
-                <p>Home</p>
-            </div>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            ><svg
+              width="30"
+              height="30"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M-0.00949333 20.0016C-0.00949358 31.036 8.96708 40.0126 20.0015 40.0126C31.0358 40.0126 40.0124 31.036 40.0124 20.0016C40.0124 14.4844 37.7689 9.48229 34.1461 5.85947C30.5233 2.23664 25.5211 -0.00688191 20.0039 -0.00688191C8.96709 -0.00935677 -0.00949029 8.96722 -0.00949333 20.0016ZM19.999 1.74138C30.0676 1.74138 38.2592 9.93297 38.2592 20.0016C38.2592 30.0702 30.0676 38.2618 19.999 38.2618C14.9647 38.2593 10.4009 36.2114 7.09501 32.9056C3.9823 29.7929 1.9864 25.5634 1.76354 20.8782L26.0114 20.8782L20.628 25.8803L21.8215 27.1631L29.5228 20.0016L21.8215 12.8401L20.628 14.1229L26.009 19.1225L1.76354 19.125C2.21918 9.46248 10.225 1.74386 19.999 1.74138Z"
+                fill="white"
+              /></svg
+          ></a>
+          <a href="whoweare.html">Who we are</a>
+          <a href="#">Cases</a>
+          <a href="contact.html">Contact</a>
         </div>
-        <div class="col-lg-6 mt-5">
-            <div class="image_monke">
-                <img src="image/Frame 13.png" alt="">
+        <button class="openbtn" onclick="openNav()">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 40 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M40.0127 20.0019C40.0127 8.96752 31.0361 -0.00905445 20.0017 -0.00905319C8.96733 -0.00905217 -0.00925053 8.96753 -0.00925256 20.0019C-0.00925155 25.5191 2.23427 30.5212 5.85709 34.144C9.47992 37.7669 14.482 40.0104 19.9992 40.0104C31.0361 40.0129 40.0127 31.0363 40.0127 20.0019ZM20.0042 38.2621C9.93556 38.2621 1.74396 30.0705 1.74396 20.0019C1.74397 9.93328 9.93556 1.74169 20.0042 1.74169C25.0385 1.74416 29.6023 3.79206 32.9082 7.09792C36.0209 10.2106 38.0168 14.4401 38.2396 19.1253L13.9917 19.1253L19.3752 14.1232L18.1816 12.8405L10.4803 20.0019L18.1816 27.1634L19.3752 25.8806L13.9942 20.881L38.2396 20.8785C37.784 30.541 29.7781 38.2596 20.0042 38.2621Z"
+              fill="white"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <main>
+      <section id="Who_we_are">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="home">
+              <div class="img_home">
+                <a href="index.html"
+                  ><img src="image/Vector (15).png" alt=""
+                /></a>
+              </div>
+              <div class="text_home">
+                <p>Home</p>
+              </div>
             </div>
-        </div>              
-        <div class="col-lg-6 mt-5">
-            <div class="left">
+            <div class="col-lg-6 mt-5">
+              <div class="image_monke">
+                <img src="image/Frame 13.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-6 mt-5">
+              <div class="left">
                 <div class="big">
-                    <p >Who we are?</p>
+                  <p>Who we are?</p>
                 </div>
                 <div class="boldddd">
-                    <p >A multi-disciplinary, independently owned design studio.</p>
+                  <p>
+                    A multi-disciplinary, independently owned design studio.
+                  </p>
                 </div>
                 <div class="normal">
-                    <p >We are a design studio made up of passionate people who love finding thoughtful and engaging solutions to our clients’ problems.</p>
+                  <p>
+                    We are a design studio made up of passionate people who love
+                    finding thoughtful and engaging solutions to our clients’
+                    problems.
+                  </p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-        </div>
-        </section>
-       <section id="head_monke">
-         <div class="container">
-            <div class="row mt-5">
-                <div class="start_text">
-                    <p>We are here to realize your vision <br> of the perfect brand or product.</p>
-                </div>
-                <div class="col-lg-12">
-                    <div class="monkeimage">
-                        <img src="image/Rectangle 1.png" alt="">
-                    </div>
-                </div>
-            </div>
-         </div>
-       </section>
-       <section id="What_we_do">
-       <div class="container">
-        <div class="row mt-5">
+      </section>
+      <section id="head_monke">
+        <div class="container">
+          <div class="row mt-5">
             <div class="start_text">
-                <p>What we do?</p>
+              <p>
+                We are here to realize your vision <br />
+                of the perfect brand or product.
+              </p>
             </div>
-            <div class="col-lg-7 mt-5">
-             <div class="what_image">
-                <img src="image/banner 1.png" alt="">
-             </div>
+            <div class="col-lg-12">
+              <div class="monkeimage">
+                <img src="image/Rectangle 1.png" alt="" />
+              </div>
             </div>
-            <div class="col-lg-5 mt-5">
-                <div class="waht_tems">
-                   <div class="buttonss">
-                    <button><a href="#">
-                        Brand & visual identity
-                    </a></button>
-                   </div>
-                  <div class="texttb">
-                    <p>Want to leapfrog your competitors? You will need at least our help. We will develop an ideal concept and style that will not leave your users indifferent.</p>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-7 mt-5">
-             <div class="what_image">
-                <img src="image/packaging.png" alt="">
-             </div>
-            </div>
-            <div class="col-lg-5 mt-5">
-                <div class="waht_tems">
-                   <div class="buttonss">
-                    <button><a href="#">
-                        Packaging
-                    </a></button>
-                   </div>
-                  <div class="texttb">
-                    <p>We can design packaging for anything. If you have a lot of products and don't know how to pack them, leave it to us!</p>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-7 mt-5">
-             <div class="what_image">
-                <img src="image/banner 3.png" alt="">
-             </div>
-            </div>
-            <div class="col-lg-5 mt-5">
-                <div class="waht_tems">
-                   <div class="buttonss">
-                    <button><a href="#">
-                        Web
-                    </a></button>
-                   </div>
-                  <div class="texttb">
-                    <p>Developing a quality website is not a job for beginners, if you want to increase the conversion and prestige of your company or brand, leave it to the professionals!</p>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-7 mt-5">
-             <div class="what_image">
-                <img src="image/banner 4.png" alt="">
-             </div>
-            </div>
-            <div class="col-lg-5 mt-5">
-                <div class="waht_tems">
-                   <div class="buttonss">
-                    <button><a href="#">
-                        App & Product
-                    </a></button>
-                   </div>
-                  <div class="texttb">
-                    <p>We take products like apps very seriously. If you give us enough time and opportunities, we will implement all the needs of your audience and users in your application. We will make a qualitative and quantitative analysis of the market and consumers, compose productive metrics and develop ideal user paths. Entrust this business to us!</p>
-                  </div>
-                </div>
-            </div>
-            <div class="col-lg-7 mt-5">
-                <div class="what_image">
-                   <img src="image/Frame 22.png" alt="">
-                </div>
-               </div>
-               <div class="col-lg-5 mt-5">
-                   <div class="waht_tems">
-                      <div class="buttonss">
-                       <button><a href="#">
-                        Design consultation
-                       </a></button>
-                      </div>
-                     <div class="texttb">
-                       <p>If you have a team of young designers but can't direct them, trust us. We will conduct trainings, as well as individually select a solution for each task you set and launch your team. Get in touch, you won't regret it!</p>
-                     </div>
-                   </div>
-               </div>
+          </div>
         </div>
-       </div>
-       </section>
+      </section>
+      <section id="What_we_do">
+        <div class="container">
+          <div class="row mt-5">
+            <div class="start_text">
+              <p>What we do?</p>
+            </div>
+            <div class="col-lg-7 mt-5">
+              <div class="what_image">
+                <img src="image/banner 1.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-5 mt-5">
+              <div class="waht_tems">
+                <div class="buttonss">
+                  <button><a href="#"> Brand & visual identity </a></button>
+                </div>
+                <div class="texttb">
+                  <p>
+                    Want to leapfrog your competitors? You will need at least
+                    our help. We will develop an ideal concept and style that
+                    will not leave your users indifferent.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 mt-5">
+              <div class="what_image">
+                <img src="image/packaging.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-5 mt-5">
+              <div class="waht_tems">
+                <div class="buttonss">
+                  <button><a href="#"> Packaging </a></button>
+                </div>
+                <div class="texttb">
+                  <p>
+                    We can design packaging for anything. If you have a lot of
+                    products and don't know how to pack them, leave it to us!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 mt-5">
+              <div class="what_image">
+                <img src="image/banner 3.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-5 mt-5">
+              <div class="waht_tems">
+                <div class="buttonss">
+                  <button><a href="#"> Web </a></button>
+                </div>
+                <div class="texttb">
+                  <p>
+                    Developing a quality website is not a job for beginners, if
+                    you want to increase the conversion and prestige of your
+                    company or brand, leave it to the professionals!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 mt-5">
+              <div class="what_image">
+                <img src="image/banner 4.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-5 mt-5">
+              <div class="waht_tems">
+                <div class="buttonss">
+                  <button><a href="#"> App & Product </a></button>
+                </div>
+                <div class="texttb">
+                  <p>
+                    We take products like apps very seriously. If you give us
+                    enough time and opportunities, we will implement all the
+                    needs of your audience and users in your application. We
+                    will make a qualitative and quantitative analysis of the
+                    market and consumers, compose productive metrics and develop
+                    ideal user paths. Entrust this business to us!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7 mt-5">
+              <div class="what_image">
+                <img src="image/Frame 22.png" alt="" />
+              </div>
+            </div>
+            <div class="col-lg-5 mt-5">
+              <div class="waht_tems">
+                <div class="buttonss">
+                  <button><a href="#"> Design consultation </a></button>
+                </div>
+                <div class="texttb">
+                  <p>
+                    If you have a team of young designers but can't direct them,
+                    trust us. We will conduct trainings, as well as individually
+                    select a solution for each task you set and launch your
+                    team. Get in touch, you won't regret it!
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-        <div class="container">
-            <div class="row mt-5 p-1">
-                <div class="col-lg-4">
-                    <div class="footer_logo">
-                        <img src="image/monkeelogo.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="footer_list1">
-                        <ul>
-                            <li><a href="#">Who we are</a></li>
-                            <li><a href="#">Cases</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="contact_list">
-                        <ul>
-                            <li><a href="#">Contact us</a></li>
-                            <li><a href="#">+994 55 555 55 55</a> </li>
-                            <li><a href="#">info@monkee-studio.com</a></li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row mt-5 p-1">
+          <div class="col-lg-4">
+            <div class="footer_logo">
+              <img src="image/monkeelogo.png" alt="" />
             </div>
-            <div class="end">
-                <div class="endtext">
-                    <p>monkeestudio © 2022</p>
-                </div>
-                <div class="icons">
-                    <ul>
-                        <li><a href="#"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.9998 0.666687C17.6225 0.666687 18.0745 0.68002 19.4958 0.746687C20.9158 0.813354 21.8825 1.03602 22.7332 1.36669C23.6132 1.70535 24.3545 2.16402 25.0958 2.90402C25.7738 3.57055 26.2984 4.37681 26.6332 5.26669C26.9625 6.11602 27.1865 7.08402 27.2532 8.50402C27.3158 9.92535 27.3332 10.3774 27.3332 14C27.3332 17.6227 27.3198 18.0747 27.2532 19.496C27.1865 20.916 26.9625 21.8827 26.6332 22.7334C26.2994 23.6237 25.7747 24.4302 25.0958 25.096C24.4291 25.7738 23.6229 26.2984 22.7332 26.6334C21.8838 26.9627 20.9158 27.1867 19.4958 27.2534C18.0745 27.316 17.6225 27.3334 13.9998 27.3334C10.3772 27.3334 9.92517 27.32 8.50384 27.2534C7.08384 27.1867 6.11717 26.9627 5.2665 26.6334C4.37627 26.2993 3.56987 25.7746 2.90384 25.096C2.22571 24.4296 1.70108 23.6233 1.3665 22.7334C1.03584 21.884 0.81317 20.916 0.746504 19.496C0.683837 18.0747 0.666504 17.6227 0.666504 14C0.666504 10.3774 0.679837 9.92535 0.746504 8.50402C0.81317 7.08269 1.03584 6.11735 1.3665 5.26669C1.70015 4.37626 2.22491 3.56978 2.90384 2.90402C3.57007 2.22566 4.37641 1.70099 5.2665 1.36669C6.11717 1.03602 7.0825 0.813354 8.50384 0.746687C9.92517 0.68402 10.3772 0.666687 13.9998 0.666687ZM13.9998 7.33335C12.2317 7.33335 10.536 8.03573 9.28579 9.28597C8.03555 10.5362 7.33317 12.2319 7.33317 14C7.33317 15.7681 8.03555 17.4638 9.28579 18.7141C10.536 19.9643 12.2317 20.6667 13.9998 20.6667C15.7679 20.6667 17.4636 19.9643 18.7139 18.7141C19.9641 17.4638 20.6665 15.7681 20.6665 14C20.6665 12.2319 19.9641 10.5362 18.7139 9.28597C17.4636 8.03573 15.7679 7.33335 13.9998 7.33335ZM22.6665 7.00002C22.6665 6.55799 22.4909 6.13407 22.1783 5.82151C21.8658 5.50895 21.4419 5.33335 20.9998 5.33335C20.5578 5.33335 20.1339 5.50895 19.8213 5.82151C19.5088 6.13407 19.3332 6.55799 19.3332 7.00002C19.3332 7.44205 19.5088 7.86597 19.8213 8.17853C20.1339 8.49109 20.5578 8.66669 20.9998 8.66669C21.4419 8.66669 21.8658 8.49109 22.1783 8.17853C22.4909 7.86597 22.6665 7.44205 22.6665 7.00002ZM13.9998 10C15.0607 10 16.0781 10.4214 16.8283 11.1716C17.5784 11.9217 17.9998 12.9392 17.9998 14C17.9998 15.0609 17.5784 16.0783 16.8283 16.8284C16.0781 17.5786 15.0607 18 13.9998 18C12.939 18 11.9216 17.5786 11.1714 16.8284C10.4213 16.0783 9.99984 15.0609 9.99984 14C9.99984 12.9392 10.4213 11.9217 11.1714 11.1716C11.9216 10.4214 12.939 10 13.9998 10Z" fill="white"/>
-                            </svg></a></li>
-                        <li><a href="#"><svg width="30" height="19" viewBox="0 0 30 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M8.92416 0.133362C9.77616 0.133362 10.5642 0.200028 11.2842 0.397362C11.9375 0.517422 12.5612 0.763803 13.1202 1.1227C13.6455 1.45203 14.0388 1.9147 14.3002 2.50803C14.5628 3.10136 14.6935 3.82803 14.6935 4.6187C14.6935 5.5427 14.4975 6.33336 14.0388 6.92669C13.6455 7.52136 12.9895 8.04803 12.2028 8.44403C13.3175 8.7747 14.1695 9.36803 14.6935 10.1587C15.2188 10.9507 15.5468 11.94 15.5468 13.0614C15.5468 13.9854 15.3495 14.776 15.0215 15.436C14.6935 16.096 14.1695 16.6894 13.5788 17.0854C12.9372 17.5098 12.2279 17.8219 11.4815 18.008C10.6948 18.2067 9.90816 18.3387 9.1215 18.3387H0.333496V0.133362H8.92416ZM8.39883 7.52003C9.12016 7.52003 9.71083 7.3227 10.1695 6.99336C10.6282 6.66403 10.8255 6.06936 10.8255 5.34403C10.8255 4.94803 10.7588 4.55203 10.6282 4.28936C10.4975 4.02536 10.3002 3.8267 10.0388 3.62936C9.77616 3.49736 9.5135 3.36536 9.1855 3.30003C8.8575 3.23336 8.53083 3.23336 8.13616 3.23336H4.3335V7.52136H8.40016L8.39883 7.52003ZM8.59616 15.304C8.9895 15.304 9.38283 15.2374 9.71083 15.172C10.042 15.1091 10.3552 14.9738 10.6282 14.776C10.8953 14.583 11.1189 14.3359 11.2842 14.0507C11.4148 13.7214 11.5468 13.3254 11.5468 12.864C11.5468 11.94 11.2842 11.28 10.7602 10.8187C10.2348 10.4227 9.5135 10.2254 8.6615 10.2254H4.3335V15.3054H8.59616V15.304ZM21.2522 15.2374C21.7762 15.7654 22.5628 16.0294 23.6122 16.0294C24.3335 16.0294 24.9895 15.832 25.5135 15.5027C26.0388 15.1067 26.3668 14.7107 26.4975 14.3147H29.7108C29.1855 15.8974 28.3988 17.0187 27.3508 17.744C26.3002 18.404 25.0548 18.8 23.5468 18.8C22.582 18.8029 21.6253 18.6238 20.7268 18.272C19.9184 17.9688 19.1975 17.4704 18.6282 16.8214C18.0192 16.2141 17.5691 15.4664 17.3175 14.644C16.9895 13.7867 16.8575 12.864 16.8575 11.808C16.8575 10.8187 16.9895 9.89603 17.3175 9.03736C17.6329 8.21081 18.0995 7.45027 18.6935 6.79469C19.2842 6.20136 20.0055 5.6747 20.7922 5.34403C21.6678 4.99211 22.6032 4.81282 23.5468 4.81603C24.6615 4.81603 25.6455 5.0147 26.4975 5.47603C27.3508 5.93736 28.0055 6.46536 28.5308 7.25736C29.0667 8.01807 29.466 8.8663 29.7108 9.76403C29.8415 10.6867 29.9068 11.6107 29.8415 12.6654H20.3335C20.3335 13.7214 20.7268 14.7107 21.2522 15.2387V15.2374ZM25.3828 8.31203C24.9242 7.8507 24.2028 7.58669 23.3495 7.58669C22.7602 7.58669 22.3002 7.7187 21.9068 7.91603C21.5135 8.1147 21.2522 8.3787 20.9895 8.6427C20.7481 8.8977 20.5884 9.21899 20.5308 9.56536C20.4642 9.89603 20.3988 10.1587 20.3988 10.4227H26.3002C26.1695 9.43336 25.8415 8.7747 25.3828 8.31203ZM19.6122 1.3867H26.9562V3.16803H19.6135V1.3867H19.6122Z" fill="white"/>
-                            </svg>
-                            </a></li>
-                        <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.4467 20.452H16.8933V14.8827C16.8933 13.5547 16.8667 11.8453 15.04 11.8453C13.188 11.8453 12.9053 13.2907 12.9053 14.7853V20.452H9.35067V9H12.764V10.56H12.8107C13.288 9.66133 14.448 8.71067 16.1813 8.71067C19.7813 8.71067 20.448 11.0813 20.448 14.1653V20.452H20.4467ZM5.33733 7.43333C5.06607 7.43368 4.79741 7.38049 4.54675 7.27681C4.29609 7.17312 4.06836 7.02099 3.87661 6.82911C3.68486 6.63724 3.53287 6.40941 3.42935 6.15868C3.32582 5.90795 3.27281 5.63926 3.27333 5.368C3.2736 4.95978 3.39491 4.5608 3.62192 4.22153C3.84894 3.88225 4.17146 3.61791 4.54871 3.46194C4.92595 3.30596 5.34098 3.26536 5.74131 3.34525C6.14163 3.42515 6.50927 3.62197 6.79774 3.91081C7.08621 4.19965 7.28255 4.56755 7.36193 4.96798C7.44131 5.3684 7.40017 5.78338 7.24371 6.16042C7.08725 6.53747 6.82249 6.85965 6.48292 7.08623C6.14335 7.3128 5.74422 7.4336 5.336 7.43333H5.33733ZM7.11867 20.452H3.55467V9H7.12V20.452H7.11867ZM22.2267 0H1.772C0.790667 0 0 0.773333 0 1.72933V22.2707C0 23.2267 0.792 24 1.77067 24H22.2213C23.2 24 24 23.2267 24 22.2707V1.72933C24 0.773333 23.2 0 22.2213 0H22.2253H22.2267Z" fill="white"/>
-                            </svg>
-                            </a></li>
-                        <li><a href="#"><svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M27.5494 3.54136C26.5315 3.99162 25.452 4.28732 24.3467 4.41869C25.5117 3.72194 26.3837 2.62538 26.8001 1.33336C25.7067 1.98402 24.5081 2.44002 23.2587 2.68669C22.4195 1.7888 21.3072 1.19331 20.0947 0.992804C18.8821 0.792299 17.6373 0.998012 16.5538 1.57796C15.4702 2.15791 14.6086 3.0796 14.1029 4.19975C13.5972 5.31989 13.4757 6.57573 13.7574 7.77203C11.5402 7.6609 9.37118 7.08472 7.39112 6.08091C5.41106 5.0771 3.66424 3.66809 2.26407 1.94536C1.76846 2.79662 1.50801 3.76433 1.5094 4.74936C1.5094 6.68269 2.4934 8.39069 3.9894 9.39069C3.10408 9.36282 2.23825 9.12373 1.46407 8.69336V8.76269C1.46434 10.0503 1.9099 11.2982 2.7252 12.2948C3.54051 13.2914 4.67538 13.9753 5.9374 14.2307C5.11556 14.4534 4.25381 14.4862 3.4174 14.3267C3.77323 15.435 4.46675 16.4043 5.40086 17.0988C6.33497 17.7934 7.46291 18.1784 8.62674 18.2C7.47004 19.1085 6.14564 19.78 4.72924 20.1763C3.31285 20.5725 1.83224 20.6857 0.37207 20.5094C2.921 22.1486 5.8882 23.0189 8.91874 23.016C19.1761 23.016 24.7854 14.5187 24.7854 7.14936C24.7854 6.90936 24.7787 6.66669 24.7681 6.42936C25.8599 5.64025 26.8022 4.66272 27.5507 3.54269L27.5494 3.54136Z" fill="white"/>
-                            </svg>
-                            </a></li>
-                        <li><a href="#"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M16.536 24V14.712H19.6467L20.112 11.1013H16.536V8.79733C16.536 7.752 16.8267 7.03867 18.3253 7.03867H20.2373V3.80933C19.3117 3.71113 18.3815 3.6635 17.4507 3.66667C14.6947 3.66667 12.808 5.34933 12.808 8.44V11.1013H9.69067V14.712H12.808V24H1.33333C0.979711 24 0.640573 23.8595 0.390524 23.6095C0.140476 23.3594 0 23.0203 0 22.6667V1.33333C0 0.979711 0.140476 0.640573 0.390524 0.390524C0.640573 0.140476 0.979711 0 1.33333 0H22.6667C23.0203 0 23.3594 0.140476 23.6095 0.390524C23.8595 0.640573 24 0.979711 24 1.33333V22.6667C24 23.0203 23.8595 23.3594 23.6095 23.6095C23.3594 23.8595 23.0203 24 22.6667 24H16.536Z" fill="white"/>
-                            </svg>
-                            </a></li>
-                       
-                    </ul>
-                </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="footer_list1">
+              <ul>
+                <li><a href="#">Who we are</a></li>
+                <li><a href="#">Cases</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
             </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="contact_list">
+              <ul>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">+994 55 555 55 55</a></li>
+                <li><a href="#">info@monkee-studio.com</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <div class="end">
+          <div class="endtext">
+            <p>monkeestudio © 2022</p>
+          </div>
+          <div class="icons">
+            <ul>
+              <li>
+                <a href="#"
+                  ><svg
+                    width="28"
+                    height="28"
+                    viewBox="0 0 28 28"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M13.9998 0.666687C17.6225 0.666687 18.0745 0.68002 19.4958 0.746687C20.9158 0.813354 21.8825 1.03602 22.7332 1.36669C23.6132 1.70535 24.3545 2.16402 25.0958 2.90402C25.7738 3.57055 26.2984 4.37681 26.6332 5.26669C26.9625 6.11602 27.1865 7.08402 27.2532 8.50402C27.3158 9.92535 27.3332 10.3774 27.3332 14C27.3332 17.6227 27.3198 18.0747 27.2532 19.496C27.1865 20.916 26.9625 21.8827 26.6332 22.7334C26.2994 23.6237 25.7747 24.4302 25.0958 25.096C24.4291 25.7738 23.6229 26.2984 22.7332 26.6334C21.8838 26.9627 20.9158 27.1867 19.4958 27.2534C18.0745 27.316 17.6225 27.3334 13.9998 27.3334C10.3772 27.3334 9.92517 27.32 8.50384 27.2534C7.08384 27.1867 6.11717 26.9627 5.2665 26.6334C4.37627 26.2993 3.56987 25.7746 2.90384 25.096C2.22571 24.4296 1.70108 23.6233 1.3665 22.7334C1.03584 21.884 0.81317 20.916 0.746504 19.496C0.683837 18.0747 0.666504 17.6227 0.666504 14C0.666504 10.3774 0.679837 9.92535 0.746504 8.50402C0.81317 7.08269 1.03584 6.11735 1.3665 5.26669C1.70015 4.37626 2.22491 3.56978 2.90384 2.90402C3.57007 2.22566 4.37641 1.70099 5.2665 1.36669C6.11717 1.03602 7.0825 0.813354 8.50384 0.746687C9.92517 0.68402 10.3772 0.666687 13.9998 0.666687ZM13.9998 7.33335C12.2317 7.33335 10.536 8.03573 9.28579 9.28597C8.03555 10.5362 7.33317 12.2319 7.33317 14C7.33317 15.7681 8.03555 17.4638 9.28579 18.7141C10.536 19.9643 12.2317 20.6667 13.9998 20.6667C15.7679 20.6667 17.4636 19.9643 18.7139 18.7141C19.9641 17.4638 20.6665 15.7681 20.6665 14C20.6665 12.2319 19.9641 10.5362 18.7139 9.28597C17.4636 8.03573 15.7679 7.33335 13.9998 7.33335ZM22.6665 7.00002C22.6665 6.55799 22.4909 6.13407 22.1783 5.82151C21.8658 5.50895 21.4419 5.33335 20.9998 5.33335C20.5578 5.33335 20.1339 5.50895 19.8213 5.82151C19.5088 6.13407 19.3332 6.55799 19.3332 7.00002C19.3332 7.44205 19.5088 7.86597 19.8213 8.17853C20.1339 8.49109 20.5578 8.66669 20.9998 8.66669C21.4419 8.66669 21.8658 8.49109 22.1783 8.17853C22.4909 7.86597 22.6665 7.44205 22.6665 7.00002ZM13.9998 10C15.0607 10 16.0781 10.4214 16.8283 11.1716C17.5784 11.9217 17.9998 12.9392 17.9998 14C17.9998 15.0609 17.5784 16.0783 16.8283 16.8284C16.0781 17.5786 15.0607 18 13.9998 18C12.939 18 11.9216 17.5786 11.1714 16.8284C10.4213 16.0783 9.99984 15.0609 9.99984 14C9.99984 12.9392 10.4213 11.9217 11.1714 11.1716C11.9216 10.4214 12.939 10 13.9998 10Z"
+                      fill="white"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="#"
+                  ><svg
+                    width="30"
+                    height="19"
+                    viewBox="0 0 30 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.92416 0.133362C9.77616 0.133362 10.5642 0.200028 11.2842 0.397362C11.9375 0.517422 12.5612 0.763803 13.1202 1.1227C13.6455 1.45203 14.0388 1.9147 14.3002 2.50803C14.5628 3.10136 14.6935 3.82803 14.6935 4.6187C14.6935 5.5427 14.4975 6.33336 14.0388 6.92669C13.6455 7.52136 12.9895 8.04803 12.2028 8.44403C13.3175 8.7747 14.1695 9.36803 14.6935 10.1587C15.2188 10.9507 15.5468 11.94 15.5468 13.0614C15.5468 13.9854 15.3495 14.776 15.0215 15.436C14.6935 16.096 14.1695 16.6894 13.5788 17.0854C12.9372 17.5098 12.2279 17.8219 11.4815 18.008C10.6948 18.2067 9.90816 18.3387 9.1215 18.3387H0.333496V0.133362H8.92416ZM8.39883 7.52003C9.12016 7.52003 9.71083 7.3227 10.1695 6.99336C10.6282 6.66403 10.8255 6.06936 10.8255 5.34403C10.8255 4.94803 10.7588 4.55203 10.6282 4.28936C10.4975 4.02536 10.3002 3.8267 10.0388 3.62936C9.77616 3.49736 9.5135 3.36536 9.1855 3.30003C8.8575 3.23336 8.53083 3.23336 8.13616 3.23336H4.3335V7.52136H8.40016L8.39883 7.52003ZM8.59616 15.304C8.9895 15.304 9.38283 15.2374 9.71083 15.172C10.042 15.1091 10.3552 14.9738 10.6282 14.776C10.8953 14.583 11.1189 14.3359 11.2842 14.0507C11.4148 13.7214 11.5468 13.3254 11.5468 12.864C11.5468 11.94 11.2842 11.28 10.7602 10.8187C10.2348 10.4227 9.5135 10.2254 8.6615 10.2254H4.3335V15.3054H8.59616V15.304ZM21.2522 15.2374C21.7762 15.7654 22.5628 16.0294 23.6122 16.0294C24.3335 16.0294 24.9895 15.832 25.5135 15.5027C26.0388 15.1067 26.3668 14.7107 26.4975 14.3147H29.7108C29.1855 15.8974 28.3988 17.0187 27.3508 17.744C26.3002 18.404 25.0548 18.8 23.5468 18.8C22.582 18.8029 21.6253 18.6238 20.7268 18.272C19.9184 17.9688 19.1975 17.4704 18.6282 16.8214C18.0192 16.2141 17.5691 15.4664 17.3175 14.644C16.9895 13.7867 16.8575 12.864 16.8575 11.808C16.8575 10.8187 16.9895 9.89603 17.3175 9.03736C17.6329 8.21081 18.0995 7.45027 18.6935 6.79469C19.2842 6.20136 20.0055 5.6747 20.7922 5.34403C21.6678 4.99211 22.6032 4.81282 23.5468 4.81603C24.6615 4.81603 25.6455 5.0147 26.4975 5.47603C27.3508 5.93736 28.0055 6.46536 28.5308 7.25736C29.0667 8.01807 29.466 8.8663 29.7108 9.76403C29.8415 10.6867 29.9068 11.6107 29.8415 12.6654H20.3335C20.3335 13.7214 20.7268 14.7107 21.2522 15.2387V15.2374ZM25.3828 8.31203C24.9242 7.8507 24.2028 7.58669 23.3495 7.58669C22.7602 7.58669 22.3002 7.7187 21.9068 7.91603C21.5135 8.1147 21.2522 8.3787 20.9895 8.6427C20.7481 8.8977 20.5884 9.21899 20.5308 9.56536C20.4642 9.89603 20.3988 10.1587 20.3988 10.4227H26.3002C26.1695 9.43336 25.8415 8.7747 25.3828 8.31203ZM19.6122 1.3867H26.9562V3.16803H19.6135V1.3867H19.6122Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M20.4467 20.452H16.8933V14.8827C16.8933 13.5547 16.8667 11.8453 15.04 11.8453C13.188 11.8453 12.9053 13.2907 12.9053 14.7853V20.452H9.35067V9H12.764V10.56H12.8107C13.288 9.66133 14.448 8.71067 16.1813 8.71067C19.7813 8.71067 20.448 11.0813 20.448 14.1653V20.452H20.4467ZM5.33733 7.43333C5.06607 7.43368 4.79741 7.38049 4.54675 7.27681C4.29609 7.17312 4.06836 7.02099 3.87661 6.82911C3.68486 6.63724 3.53287 6.40941 3.42935 6.15868C3.32582 5.90795 3.27281 5.63926 3.27333 5.368C3.2736 4.95978 3.39491 4.5608 3.62192 4.22153C3.84894 3.88225 4.17146 3.61791 4.54871 3.46194C4.92595 3.30596 5.34098 3.26536 5.74131 3.34525C6.14163 3.42515 6.50927 3.62197 6.79774 3.91081C7.08621 4.19965 7.28255 4.56755 7.36193 4.96798C7.44131 5.3684 7.40017 5.78338 7.24371 6.16042C7.08725 6.53747 6.82249 6.85965 6.48292 7.08623C6.14335 7.3128 5.74422 7.4336 5.336 7.43333H5.33733ZM7.11867 20.452H3.55467V9H7.12V20.452H7.11867ZM22.2267 0H1.772C0.790667 0 0 0.773333 0 1.72933V22.2707C0 23.2267 0.792 24 1.77067 24H22.2213C23.2 24 24 23.2267 24 22.2707V1.72933C24 0.773333 23.2 0 22.2213 0H22.2253H22.2267Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><svg
+                    width="28"
+                    height="24"
+                    viewBox="0 0 28 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M27.5494 3.54136C26.5315 3.99162 25.452 4.28732 24.3467 4.41869C25.5117 3.72194 26.3837 2.62538 26.8001 1.33336C25.7067 1.98402 24.5081 2.44002 23.2587 2.68669C22.4195 1.7888 21.3072 1.19331 20.0947 0.992804C18.8821 0.792299 17.6373 0.998012 16.5538 1.57796C15.4702 2.15791 14.6086 3.0796 14.1029 4.19975C13.5972 5.31989 13.4757 6.57573 13.7574 7.77203C11.5402 7.6609 9.37118 7.08472 7.39112 6.08091C5.41106 5.0771 3.66424 3.66809 2.26407 1.94536C1.76846 2.79662 1.50801 3.76433 1.5094 4.74936C1.5094 6.68269 2.4934 8.39069 3.9894 9.39069C3.10408 9.36282 2.23825 9.12373 1.46407 8.69336V8.76269C1.46434 10.0503 1.9099 11.2982 2.7252 12.2948C3.54051 13.2914 4.67538 13.9753 5.9374 14.2307C5.11556 14.4534 4.25381 14.4862 3.4174 14.3267C3.77323 15.435 4.46675 16.4043 5.40086 17.0988C6.33497 17.7934 7.46291 18.1784 8.62674 18.2C7.47004 19.1085 6.14564 19.78 4.72924 20.1763C3.31285 20.5725 1.83224 20.6857 0.37207 20.5094C2.921 22.1486 5.8882 23.0189 8.91874 23.016C19.1761 23.016 24.7854 14.5187 24.7854 7.14936C24.7854 6.90936 24.7787 6.66669 24.7681 6.42936C25.8599 5.64025 26.8022 4.66272 27.5507 3.54269L27.5494 3.54136Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#"
+                  ><svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16.536 24V14.712H19.6467L20.112 11.1013H16.536V8.79733C16.536 7.752 16.8267 7.03867 18.3253 7.03867H20.2373V3.80933C19.3117 3.71113 18.3815 3.6635 17.4507 3.66667C14.6947 3.66667 12.808 5.34933 12.808 8.44V11.1013H9.69067V14.712H12.808V24H1.33333C0.979711 24 0.640573 23.8595 0.390524 23.6095C0.140476 23.3594 0 23.0203 0 22.6667V1.33333C0 0.979711 0.140476 0.640573 0.390524 0.390524C0.640573 0.140476 0.979711 0 1.33333 0H22.6667C23.0203 0 23.3594 0.140476 23.6095 0.390524C23.8595 0.640573 24 0.979711 24 1.33333V22.6667C24 23.0203 23.8595 23.3594 23.6095 23.6095C23.3594 23.8595 23.0203 24 22.6667 24H16.536Z"
+                      fill="white"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
+    <script>
+      // burger
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="assets/js/script.js"></script>
-</body>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
